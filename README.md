@@ -33,7 +33,7 @@ Digital takeoff system for construction blueprints — contractors upload PDFs, 
 
 ## AI Agent Infrastructure
 
-Five production agents behind a composable safety layer. 200+ automation workflows.
+Five production agents orchestrated through LangChain pipelines with a composable safety layer. 200+ workflows managed via a custom multi-agent orchestration framework.
 
 ### Guardrails
 
@@ -145,7 +145,7 @@ Rails 8 backend with Solid Queue for background job processing (webhook delivery
 
 **Real-time Dashboard** — WebSocket server ingesting IDE hook events for session lifecycle tracking. In-memory event store (10K cap) with metrics aggregation. Client reconnect with exponential backoff (1.5x multiplier, 30s ceiling).
 
-**Construction AI Plugin** — 7 domain-specific agents (estimation, code inspection, procurement, scheduling, customer service, ad optimization, content generation) + blueprint OCR tool via Mistral. Runs inside Claude Code as a first-party plugin.
+**Construction AI Plugin** — Custom multi-agent orchestration layer with 7 domain-specific agents (estimation, code inspection, procurement, scheduling, customer service, ad optimization, content generation) + blueprint OCR via Mistral vision. Runs inside Claude Code as a first-party plugin.
 
 ---
 
@@ -155,6 +155,7 @@ Rails 8 backend with Solid Queue for background job processing (webhook delivery
 |-------|------------|
 | **Languages** | TypeScript, Python, SQL, Ruby |
 | **LLMs** | Claude (Opus · Sonnet · Haiku), GPT-4o, Gemini 2.5 Flash |
+| **Orchestration** | LangChain pipelines · custom multi-agent framework · 200+ workflows |
 | **Frontend** | React 19, Next.js 16, Vite, Bun, TanStack Query, Tailwind |
 | **Mobile** | Capacitor · 13 native plugins · IndexedDB offline-first sync |
 | **Database** | PostgreSQL — 170 migrations, row-level security, realtime subscriptions, 34 edge functions |
