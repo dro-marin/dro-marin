@@ -139,7 +139,7 @@ Rails 8 backend with Solid Queue for background job processing (webhook delivery
 
 ## More Projects
 
-**AI Drawing Analysis** — Floor plan analysis via Gemini 2.5 Flash: room detection, opening extraction, confidence scoring. Canvas measurement tools (area, linear, count) on Konva with Shoelace area calculation and scale conversion. Redline detection that identifies delta symbols and revision cloud bubbles on construction drawings.
+**AI Drawing Analysis** — Floor plan analysis via Gemini: room detection, opening extraction, confidence scoring. Canvas measurement tools (area, linear, count) on Konva with Shoelace area calculation and scale conversion. Redline detection that identifies delta symbols and revision cloud bubbles on construction drawings.
 
 **Programmatic Video** — Remotion compositions with spring-based scene transitions and WebGL shader backgrounds. Multi-aspect output (1:1, 16:9, 4:5) from a single composition tree.
 
@@ -154,7 +154,7 @@ Rails 8 backend with Solid Queue for background job processing (webhook delivery
 | Layer | What I Use |
 |-------|------------|
 | **Languages** | TypeScript, Python, SQL, Ruby |
-| **LLMs** | Claude (Opus · Sonnet · Haiku) + Codex, GPT-4o, Gemini 2.5 Flash, MiniMax M2.5, GLM 5, Kimi K2.5 |
+| **LLMs** | Claude (Opus · Sonnet · Haiku) + Codex, GPT, Gemini, MiniMax, GLM, Kimi |
 | **Orchestration** | n8n pipelines · custom multi-agent framework · 200+ workflows |
 | **Frontend** | React 19, Next.js 16, Vite, Bun, TanStack Query, Tailwind |
 | **Mobile** | Capacitor · 13 native plugins · IndexedDB offline-first sync |
