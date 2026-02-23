@@ -53,10 +53,10 @@ Five production agents orchestrated through n8n pipelines with a composable safe
 
 | Agent | Model | Pipeline | Safety |
 |-------|-------|----------|--------|
-| **Estimator** | Claude Opus (vision) | Project photos → structured material takeoff → PDF estimate with labor, overhead, profit | PII in + out |
-| **Receptionist** | Claude Haiku + Voice AI | Inbound call → HMAC-validated webhook → intent classification (booking / quote / inquiry / complaint) → urgency scoring → lead creation | Jailbreak + PII |
-| **Project Manager** | Claude Haiku | Active jobs + weather forecast → prioritized daily crew schedule with weather-adjusted task reordering | PII output |
-| **Copywriter** | Claude Sonnet | Brand-voice marketing content for contractor profiles | Jailbreak + NSFW + PII |
+| **Estimator** | Claude Opus + Codex (vision) | Project photos → structured material takeoff → PDF estimate with labor, overhead, profit | PII in + out |
+| **Receptionist** | Claude Haiku + Codex + Voice AI | Inbound call → HMAC-validated webhook → intent classification (booking / quote / inquiry / complaint) → urgency scoring → lead creation | Jailbreak + PII |
+| **Project Manager** | Claude Haiku + Codex | Active jobs + weather forecast → prioritized daily crew schedule with weather-adjusted task reordering | PII output |
+| **Copywriter** | Claude Sonnet + Codex | Brand-voice marketing content for contractor profiles | Jailbreak + NSFW + PII |
 | **Lead Dispatch** | Rule engine | Incoming lead → trade + geo matching → contractor notification via branded email | — |
 
 ### MCP Servers
@@ -110,9 +110,9 @@ Autonomous error detection → resolution → PR creation.
 1. **Sentry alert** fires on unhandled exception
 2. **Edge function** applies sliding-window rate limiter (10 events/min, database-backed) — prevents alert storms from triggering redundant fix attempts
 3. **VPS agent** receives task. Classifies complexity → routes to appropriate model:
-   - **Opus** — architectural issues, multi-file refactors
-   - **Sonnet** — runtime errors, logic bugs
-   - **Haiku** — type errors, lint fixes
+   - **Opus + Codex** — architectural issues, multi-file refactors
+   - **Sonnet + Codex** — runtime errors, logic bugs
+   - **Haiku + Codex** — type errors, lint fixes
    - Automatic fallback chain if primary model unavailable
 4. **Git worktree isolation** — each fix gets its own `git worktree` and branch. Parallel fixes can't contaminate each other or main
 5. **Automated PR** — agent commits fix, creates pull request via CLI, emits SSE event to monitoring dashboard
@@ -154,7 +154,7 @@ Rails 8 backend with Solid Queue for background job processing (webhook delivery
 | Layer | What I Use |
 |-------|------------|
 | **Languages** | TypeScript, Python, SQL, Ruby |
-| **LLMs** | Claude (Opus · Sonnet · Haiku), GPT-4o, Gemini 2.5 Flash |
+| **LLMs** | Claude (Opus · Sonnet · Haiku) + Codex, GPT-4o, Gemini 2.5 Flash |
 | **Orchestration** | n8n pipelines · custom multi-agent framework · 200+ workflows |
 | **Frontend** | React 19, Next.js 16, Vite, Bun, TanStack Query, Tailwind |
 | **Mobile** | Capacitor · 13 native plugins · IndexedDB offline-first sync |
