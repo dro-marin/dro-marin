@@ -33,7 +33,7 @@ Digital takeoff system for construction blueprints — contractors upload PDFs, 
 
 ## AI Agent Infrastructure
 
-Five production agents orchestrated through LangChain pipelines with a composable safety layer. 200+ workflows managed via a custom multi-agent orchestration framework.
+Five production agents orchestrated through n8n pipelines with a composable safety layer. 200+ workflows managed via a custom multi-agent orchestration framework.
 
 ### Guardrails
 
@@ -155,7 +155,7 @@ Rails 8 backend with Solid Queue for background job processing (webhook delivery
 |-------|------------|
 | **Languages** | TypeScript, Python, SQL, Ruby |
 | **LLMs** | Claude (Opus · Sonnet · Haiku), GPT-4o, Gemini 2.5 Flash |
-| **Orchestration** | LangChain pipelines · custom multi-agent framework · 200+ workflows |
+| **Orchestration** | n8n pipelines · custom multi-agent framework · 200+ workflows |
 | **Frontend** | React 19, Next.js 16, Vite, Bun, TanStack Query, Tailwind |
 | **Mobile** | Capacitor · 13 native plugins · IndexedDB offline-first sync |
 | **Database** | PostgreSQL — 170 migrations, row-level security, realtime subscriptions, 34 edge functions |
