@@ -154,7 +154,7 @@ Rails 8 backend with Solid Queue for background job processing (webhook delivery
 | Layer | What I Use |
 |-------|------------|
 | **Languages** | TypeScript, Python, SQL, Ruby |
-| **LLMs** | Claude (Opus · Sonnet · Haiku) + Codex, GPT-4o, Gemini 2.5 Flash |
+| **LLMs** | Claude (Opus · Sonnet · Haiku) + Codex, GPT-4o, Gemini 2.5 Flash, MiniMax M2.5, GLM 5, Kimi K2.5 |
 | **Orchestration** | n8n pipelines · custom multi-agent framework · 200+ workflows |
 | **Frontend** | React 19, Next.js 16, Vite, Bun, TanStack Query, Tailwind |
 | **Mobile** | Capacitor · 13 native plugins · IndexedDB offline-first sync |
